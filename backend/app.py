@@ -34,6 +34,12 @@ def predict_image(image):
         _, pred = torch.max(output, 1)
     return "Pneumonia" if pred.item() == 1 else "Normal"
 
+# Root Endpoint for Health Checks
+@app.route('/')
+def home():
+    return jsonify({'status': 'ok', 'message': 'Flask app is running'})
+
+
 # API Route for Prediction
 @app.route('/predict', methods=['POST'])
 def predict():
