@@ -1,0 +1,124 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #081327, #1e152b);
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(135deg, #081327, #1e152b);
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgb(96, 231, 201);
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Container */
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #292946;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* File Input */
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #3a3a5e;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+  background: #4a4a6e;
+}
+
+/* Button */
+button {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+  transform: scale(1.05);
+}
+
+/* Result Text - Improved with Glow Effect */
+#result {
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 2px 2px 10px rgba(0, 255, 204, 0.8);
+  padding-bottom: 20px;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Image Preview - Centered Below Prediction */
+img {
+  max-width: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+  transition: 0.3s ease-in-out;
+  display: block;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  header {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+}
