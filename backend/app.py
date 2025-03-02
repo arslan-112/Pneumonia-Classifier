@@ -9,7 +9,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend communication
+CORS(app, resources={r"/predict": {"origins": "*"}})
 
 # Load Model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
